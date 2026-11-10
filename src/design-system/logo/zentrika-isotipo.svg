@@ -1,0 +1,30 @@
+<!-- ZENTRIKA · reconstrucción vectorial de la referencia aprobada. Generado por design-system/scripts/build_logo.py -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 181.2 122" width="181.2" height="122" role="img" aria-label="ZENTRIKA">
+  <defs>
+    <linearGradient id="zk-diag" x1="169.2" y1="0" x2="0" y2="110" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#2A66FF"/>
+      <stop offset="0.5" stop-color="#2450EE"/>
+      <stop offset="0.82" stop-color="#6366F1"/>
+      <stop offset="1" stop-color="#8B5CF6"/>
+    </linearGradient>
+    <linearGradient id="zk-bar" x1="0" y1="0" x2="169.2" y2="27.6" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#5C8DFF"/>
+      <stop offset="0.6" stop-color="#3B82FF"/>
+      <stop offset="1" stop-color="#2C6BFF"/>
+    </linearGradient>
+    <linearGradient id="zk-piece" x1="57" y1="110" x2="169.2" y2="69.6" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#2F7DFF"/>
+      <stop offset="1" stop-color="#45B4FF"/>
+    </linearGradient>
+    <linearGradient id="zk-fold" x1="0" y1="27.6" x2="0" y2="43.6" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0A1650" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#0A1650" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="zk-sheen" x1="169.2" y1="0" x2="57" y2="110" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.14"/>
+      <stop offset="0.5" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="zk-diag-clip"><path d="M112.2,0 L169.2,0 L57,110 L0,110 Z"/></clipPath>
+  </defs>
+  <g transform="translate(6 6)"><path d="M112.2,0 L169.2,0 L57,110 L0,110 Z" fill="url(#zk-diag)"/><g clip-path="url(#zk-diag-clip)"><path d="M84.05,27.6 L141.05,27.6 L124.73,43.6 L67.73,43.6 Z" fill="url(#zk-fold)"/><path d="M169.2,0 Q93.06,38.5 61,110 L169.2,110 Z" fill="url(#zk-sheen)"/></g><path d="M39,0 L169.2,0 L141.05,27.6 L10.85,27.6 Z" fill="url(#zk-bar)"/><path d="M105.81,69.6 L169.2,69.6 L127.99,110 L64.6,110 Z" fill="url(#zk-piece)"/></g>
+</svg>

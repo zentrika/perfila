@@ -1,0 +1,30 @@
+<!-- ZENTRIKA · reconstrucción vectorial de la referencia aprobada. Generado por design-system/scripts/build_logo.py -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 711.37 110" width="711.37" height="110" role="img" aria-label="ZENTRIKA">
+  <defs>
+    <linearGradient id="zk-diag" x1="169.2" y1="0" x2="0" y2="110" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#2A66FF"/>
+      <stop offset="0.5" stop-color="#2450EE"/>
+      <stop offset="0.82" stop-color="#6366F1"/>
+      <stop offset="1" stop-color="#8B5CF6"/>
+    </linearGradient>
+    <linearGradient id="zk-bar" x1="0" y1="0" x2="169.2" y2="27.6" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#5C8DFF"/>
+      <stop offset="0.6" stop-color="#3B82FF"/>
+      <stop offset="1" stop-color="#2C6BFF"/>
+    </linearGradient>
+    <linearGradient id="zk-piece" x1="57" y1="110" x2="169.2" y2="69.6" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#2F7DFF"/>
+      <stop offset="1" stop-color="#45B4FF"/>
+    </linearGradient>
+    <linearGradient id="zk-fold" x1="0" y1="27.6" x2="0" y2="43.6" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0A1650" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#0A1650" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="zk-sheen" x1="169.2" y1="0" x2="57" y2="110" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.14"/>
+      <stop offset="0.5" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="zk-diag-clip"><path d="M112.2,0 L169.2,0 L57,110 L0,110 Z"/></clipPath>
+  </defs>
+  <path d="M112.2,0 L169.2,0 L57,110 L0,110 Z" fill="url(#zk-diag)"/><g clip-path="url(#zk-diag-clip)"><path d="M84.05,27.6 L141.05,27.6 L124.73,43.6 L67.73,43.6 Z" fill="url(#zk-fold)"/><path d="M169.2,0 Q93.06,38.5 61,110 L169.2,110 Z" fill="url(#zk-sheen)"/></g><path d="M39,0 L169.2,0 L141.05,27.6 L10.85,27.6 Z" fill="url(#zk-bar)"/><path d="M105.81,69.6 L169.2,69.6 L127.99,110 L64.6,110 Z" fill="url(#zk-piece)"/><rect x="215.49" y="0" width="1.2" height="110" fill="#080F1A" opacity="0.35"/><g fill="#080F1A" transform="translate(262.99 21.56) scale(0.45)"><path d="M0,0 L87,0 L87,17 L24.65,83 L87,83 L87,100 L0,100 L0,83 L62.35,17 L0,17 Z" fill-rule="evenodd"/><path d="M134,0 L210,0 L210,17 L151,17 L151,41.5 L203.92,41.5 L203.92,58.5 L151,58.5 L151,83 L210,83 L210,100 L134,100 Z" fill-rule="evenodd"/><path d="M257,0 L274,0 L274,100 L257,100 Z" fill-rule="evenodd"/><path d="M331,0 L348,0 L348,100 L331,100 Z" fill-rule="evenodd"/><path d="M257,0 L278.15,0 L348,100 L326.85,100 Z" fill-rule="evenodd"/><path d="M395,0 L497,0 L497,17 L395,17 Z" fill-rule="evenodd"/><path d="M437.5,0 L454.5,0 L454.5,100 L437.5,100 Z" fill-rule="evenodd"/><path d="M544,0 L561,0 L561,100 L544,100 Z" fill-rule="evenodd"/><path d="M544,0 H603 A28,28 0 0 1 603,56 H544 Z M561,17 H603 A11,11 0 0 1 603,39 H561 Z" fill-rule="evenodd"/><path d="M577.43,47.5 L597.57,47.5 L630.87,100 L610.73,100 Z" fill-rule="evenodd"/><path d="M678,0 L695,0 L695,100 L678,100 Z" fill-rule="evenodd"/><path d="M742,0 L759,0 L759,100 L742,100 Z" fill-rule="evenodd"/><path d="M814.77,0 L839.73,0 L781.68,54 L756.72,54 Z" fill-rule="evenodd"/><path d="M775.79,42 L796.61,42 L837.66,100 L816.84,100 Z" fill-rule="evenodd"/><path d="M935.65,0 L955.35,0 L906.7,100 L887,100 Z" fill-rule="evenodd"/><path d="M935.65,0 L955.35,0 L1004,100 L984.3,100 Z" fill-rule="evenodd"/><path d="M938.54,66 L977.96,66 L977.96,79.6 L938.54,79.6 Z" fill-rule="evenodd"/></g><text x="262.99" y="106.04" font-family="Inter, 'Inter Variable', system-ui, sans-serif" font-size="22" letter-spacing="0.77" fill="#334155">Ingeniería que <tspan fill="#1D6FF2" font-weight="600">transforma</tspan> ideas.</text>
+</svg>

@@ -1,0 +1,169 @@
+/*
+ * Plantillas de hoja de vida.
+ * Reglas ATS que cumplen todas: una sola columna, texto real (nada de imágenes ni íconos), sin
+ * tablas ni cuadros de texto, títulos estándar y orden visual igual al orden del HTML.
+ * Sin ligaduras, y espaciado entre letras de 0,1em como máximo y solo en títulos: probado con
+ * pdftotext y con el extractor de Perfila, desde 0,2em el ATS lee «E D U C A C I Ó N».
+ *
+ * Saltos de página: ninguna entrada se parte, cada título queda con su primer contenido y las
+ * secciones cortas (todas menos Experiencia) se mantienen enteras en una misma página.
+ */
+
+.cv-sheet {
+  position: relative;
+  --cv-accent: #1d4ed8;
+  --cv-ink: #111827;
+  --cv-ink-2: #374151;
+  --cv-ink-3: #4b5563;
+  background: #fff;
+  color: var(--cv-ink);
+  width: 100%;
+  padding: 13mm 15mm;
+  /* Fuentes estándar del sistema: Chrome imprime las fuentes variables (como Inter Variable) como
+     Type 3, que algunos ATS no leen. Arial y Georgia se incrustan como TrueType. */
+  font-family: Arial, 'Liberation Sans', Helvetica, sans-serif;
+  font-size: 10.5pt;
+  line-height: 1.4;
+  letter-spacing: 0;
+  font-variant-ligatures: none;
+  font-kerning: normal;
+  text-align: left;
+  overflow-wrap: anywhere;
+  color-scheme: light;
+}
+.cv-sheet.cv-fs-sm { font-size: 9.5pt; }
+.cv-sheet.cv-fs-lg { font-size: 11.5pt; }
+.cv-sheet * { letter-spacing: 0; }
+.cv-sheet a { color: inherit; text-decoration: none; }
+.cv-sheet h1, .cv-sheet h2, .cv-sheet h3, .cv-sheet p, .cv-sheet ul { margin: 0; font-family: inherit; }
+
+.cv-header { margin-bottom: 0.9em; }
+.cv-name { font-size: 2.15em; font-weight: 700; line-height: 1.1; color: var(--cv-ink); }
+.cv-headline { font-size: 1.12em; font-weight: 600; margin-top: 0.2em; color: var(--cv-ink-2); }
+.cv-contact { font-size: 0.93em; margin-top: 0.45em; color: var(--cv-ink-2); }
+.cv-sep { color: #9ca3af; }
+
+.cv-section { margin-top: 1.05em; }
+.cv-section:not(.cv-s-experience) { break-inside: avoid; page-break-inside: avoid; }
+.cv-h2 {
+  font-size: 1.04em;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--cv-ink);
+  padding-bottom: 0.2em;
+  border-bottom: 1px solid #d1d5db;
+  margin-bottom: 0.5em;
+  break-after: avoid;
+  page-break-after: avoid;
+}
+.cv-entry { break-inside: avoid; page-break-inside: avoid; }
+.cv-entry + .cv-entry { margin-top: 0.7em; }
+.cv-line { display: flex; justify-content: space-between; align-items: baseline; gap: 1em; }
+.cv-h3 { font-size: 1em; font-weight: 400; line-height: 1.35; }
+.cv-role { font-weight: 700; }
+.cv-dash { color: var(--cv-ink-3); }
+.cv-date { flex: none; white-space: nowrap; font-size: 0.93em; color: var(--cv-ink-2); }
+.cv-sub { font-size: 0.93em; color: var(--cv-ink-3); margin-top: 0.05em; }
+.cv-ul { list-style: none; padding-left: 0; margin-top: 0.3em; }
+.cv-ul li { margin: 0.18em 0; padding-left: 1em; text-indent: -0.8em; break-inside: avoid; }
+.cv-bullet { color: var(--cv-ink-3); display: inline-block; width: 0.8em; text-indent: 0; }
+.cv-skills, .cv-compact { margin-top: 0; }
+.cv-p { margin-top: 0; }
+.cv-tech { color: var(--cv-ink-3); }
+
+/* ── Moderna ─────────────────────────────────────── */
+.cv-t-moderna .cv-name { font-size: 2.35em; font-weight: 800; color: #0f172a; }
+.cv-t-moderna .cv-headline { color: var(--cv-accent); }
+.cv-t-moderna .cv-h2 { color: var(--cv-accent); text-transform: none; font-size: 1.12em; border-bottom: 1.5px solid var(--cv-accent); }
+.cv-t-moderna .cv-bullet { color: var(--cv-accent); }
+
+/* ── Técnica ─────────────────────────────────────── */
+.cv-t-tecnica { font-family: Aptos, Calibri, Carlito, Arial, 'Liberation Sans', sans-serif; line-height: 1.38; }
+.cv-t-tecnica .cv-name { font-size: 2.1em; font-weight: 700; color: #0f172a; }
+.cv-t-tecnica .cv-headline { color: var(--cv-accent); font-weight: 600; }
+.cv-t-tecnica .cv-section { margin-top: 0.95em; }
+.cv-t-tecnica .cv-h2 {
+  font-size: 0.9em; letter-spacing: 0.06em; color: #0f172a; border-bottom: 0;
+  background: #f1f5f9; border-left: 3px solid var(--cv-accent); padding: 0.28em 0.6em; margin-bottom: 0.55em;
+}
+.cv-t-tecnica .cv-date { color: var(--cv-accent); font-weight: 600; }
+.cv-t-tecnica .cv-bullet { color: var(--cv-accent); }
+
+/* ── Elegante ────────────────────────────────────── */
+.cv-t-elegante { font-family: Arial, 'Liberation Sans', Helvetica, sans-serif; line-height: 1.4; }
+.cv-t-elegante .cv-header { display: grid; grid-template-columns: minmax(0, 1fr) auto; column-gap: 1.5em; align-items: end; margin-bottom: 1.1em; }
+.cv-t-elegante .cv-name {
+  font-family: Georgia, 'Times New Roman', 'Liberation Serif', serif; font-size: 2.05em; font-weight: 400;
+  text-transform: uppercase; letter-spacing: 0.08em; padding-bottom: 0.18em; border-bottom: 1px solid #9ca3af;
+}
+.cv-t-elegante .cv-name-last { font-weight: 700; }
+.cv-t-elegante .cv-headline { font-family: Georgia, 'Times New Roman', 'Liberation Serif', serif; font-size: 1.04em; font-weight: 700; color: var(--cv-ink); text-align: right; padding-bottom: 0.3em; }
+.cv-t-elegante .cv-contact { grid-column: 1 / -1; margin-top: 0.55em; color: var(--cv-ink); font-weight: 600; font-size: 0.9em; }
+.cv-t-elegante .cv-sep { color: var(--cv-ink-3); }
+.cv-t-elegante .cv-section { border-top: 1px solid #9ca3af; padding-top: 0.75em; margin-top: 0.85em; }
+.cv-t-elegante .cv-header + .cv-section { border-top: 0; padding-top: 0; }
+.cv-t-elegante .cv-h2 {
+  font-family: Georgia, 'Times New Roman', 'Liberation Serif', serif; font-size: 1em; font-weight: 700;
+  letter-spacing: 0.1em; border-bottom: 0; padding-bottom: 0; margin-bottom: 0.45em;
+}
+.cv-t-elegante .cv-section > :not(.cv-h2) { margin-left: 2.4em; }
+.cv-t-elegante .cv-role { font-family: Georgia, 'Times New Roman', 'Liberation Serif', serif; }
+.cv-t-elegante .cv-date { color: var(--cv-ink); font-weight: 600; }
+.cv-t-elegante .cv-bullet { color: var(--cv-ink); }
+
+/* ── Contraste ───────────────────────────────────── */
+.cv-t-contraste { line-height: 1.4; }
+.cv-t-contraste.cv-sheet { --cv-head: color-mix(in srgb, var(--cv-accent) 55%, #000); }
+.cv-t-contraste .cv-header { background: var(--cv-head); color: #fff; padding: 1.4em 1.6em 0; margin-bottom: 1.2em; border-bottom: 5px solid var(--cv-head); }
+.cv-t-contraste .cv-name { color: #fff; font-size: 2.45em; font-weight: 800; text-transform: uppercase; line-height: 1.02; letter-spacing: 0.02em; }
+.cv-t-contraste .cv-headline { color: #e5e7eb; text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.95em; margin-top: 0.55em; }
+.cv-t-contraste .cv-contact { margin: 1.2em -1.6em 0; padding: 0.7em 1.6em; background: #ececec; color: #111; font-size: 0.9em; }
+.cv-t-contraste .cv-sep { color: #6b7280; }
+.cv-t-contraste .cv-h2 { font-size: 1.08em; font-weight: 800; letter-spacing: 0.08em; border-bottom: 0; padding-bottom: 0; color: #111; }
+.cv-t-contraste .cv-h2::after { content: ''; display: inline-block; width: 1.3em; margin-left: 0.3em; border-bottom: 2px solid var(--cv-head); }
+.cv-t-contraste .cv-bullet { color: var(--cv-head); }
+
+/* ── Clásica ─────────────────────────────────────── */
+.cv-t-clasica { font-family: Georgia, 'Times New Roman', Times, 'Liberation Serif', serif; line-height: 1.38; }
+.cv-t-clasica .cv-header { text-align: center; padding-bottom: 0.6em; border-bottom: 1.5px solid var(--cv-ink); }
+.cv-t-clasica .cv-name { font-size: 2.05em; font-weight: 700; }
+.cv-t-clasica .cv-headline { font-weight: 400; font-style: italic; }
+.cv-t-clasica .cv-h2 { font-size: 1em; border-bottom-color: var(--cv-ink); }
+.cv-t-clasica .cv-date { font-style: italic; }
+
+/* ── Ejecutiva ───────────────────────────────────── */
+.cv-t-ejecutiva { line-height: 1.32; }
+.cv-t-ejecutiva .cv-header { display: block; padding-left: 0.8em; border-left: 4px solid var(--cv-accent); }
+.cv-t-ejecutiva .cv-name { font-size: 2em; font-weight: 800; }
+.cv-t-ejecutiva .cv-headline { font-size: 1.04em; }
+.cv-t-ejecutiva .cv-section { margin-top: 0.9em; }
+.cv-t-ejecutiva .cv-h2 { font-size: 0.92em; color: var(--cv-accent); border-bottom: 2px solid var(--cv-accent); }
+.cv-t-ejecutiva .cv-org { font-weight: 600; }
+.cv-t-ejecutiva .cv-entry + .cv-entry { margin-top: 0.55em; }
+
+/* ── Mínima ──────────────────────────────────────── */
+.cv-t-minimal { font-family: Arial, Helvetica, 'Liberation Sans', sans-serif; color: #000; --cv-ink: #000; --cv-ink-2: #000; --cv-ink-3: #222; }
+.cv-t-minimal .cv-name { font-size: 1.85em; }
+.cv-t-minimal .cv-headline { font-weight: 400; }
+.cv-t-minimal .cv-h2 { border-bottom: 0; padding-bottom: 0; margin-bottom: 0.35em; font-size: 1em; }
+.cv-t-minimal .cv-sep { color: #000; }
+
+/* ── Tipografía elegida por la persona (gana sobre la de la plantilla) ─
+   Calibri y Aptos vienen con Microsoft Office; si no están instaladas, el navegador usa Carlito o Arial. */
+.cv-sheet.cv-font-arial, .cv-sheet.cv-font-arial * { font-family: Arial, 'Liberation Sans', Helvetica, sans-serif; }
+.cv-sheet.cv-font-calibri, .cv-sheet.cv-font-calibri * { font-family: Calibri, Carlito, Arial, 'Liberation Sans', sans-serif; }
+.cv-sheet.cv-font-aptos, .cv-sheet.cv-font-aptos * { font-family: Aptos, Calibri, Carlito, Arial, 'Liberation Sans', sans-serif; }
+.cv-sheet.cv-font-georgia, .cv-sheet.cv-font-georgia * { font-family: Georgia, 'Times New Roman', 'Liberation Serif', serif; }
+.cv-sheet.cv-font-cambria, .cv-sheet.cv-font-cambria * { font-family: Cambria, Caladea, Georgia, 'Liberation Serif', serif; }
+
+/* ── Impresión: solo la hoja de vida, a tamaño real ─ */
+.cv-print-host { display: none; }
+@page { margin: 13mm 15mm; }
+@media print {
+  :root, [data-theme] { color-scheme: light !important; }
+  html, body { background: #fff !important; color: #000 !important; margin: 0 !important; }
+  .app-shell, .toast, .skip-link { display: none !important; }
+  .cv-print-host { display: block !important; }
+  .cv-print-host .cv-sheet { padding: 0; width: auto; box-shadow: none; }
+  * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}

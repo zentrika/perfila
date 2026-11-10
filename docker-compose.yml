@@ -1,0 +1,14 @@
+# Perfila — independiente de Órbita, ZentrikaOS y Zentrika.com. No tiene base de datos.
+name: perfila
+
+services:
+  web:
+    build:
+      context: .
+      args:
+        NEXT_PUBLIC_SITE_URL: ${NEXT_PUBLIC_SITE_URL:-http://127.0.0.1:3200}
+        NEXT_PUBLIC_ORBITA_URL: ${NEXT_PUBLIC_ORBITA_URL:-http://127.0.0.1:3000}
+        NEXT_PUBLIC_ZENTRIKA_URL: ${NEXT_PUBLIC_ZENTRIKA_URL:-http://127.0.0.1:3100}
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:3200:3200"
