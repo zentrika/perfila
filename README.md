@@ -2,6 +2,8 @@
 
 Generador de hojas de vida compatibles con ATS y analizador de CV. *Hojas de vida que los ATS leen y los reclutadores recuerdan.*
 
+**Úsalo gratis:** https://perfila-zentrika.vercel.app · **¿Ideas o errores?** [Abre un issue](https://github.com/zentrika/perfila/issues): toda sugerencia es bienvenida.
+
 * **Stack:** Next.js 15 (App Router) y TypeScript, sin dependencias de UI de terceros. Es el mismo stack de Zentrika.com.
 * **Sin backend ni base de datos:** todo ocurre en el navegador. La hoja de vida se guarda en `localStorage` con autoguardado, así que sobrevive a recargas y cierres de pestaña. Los archivos que se analizan nunca salen del equipo.
 * **Diseño:** copia versionada del design system de ZentrikaOS en `src/design-system/`. No se edita aquí (ver su README).
