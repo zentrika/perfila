@@ -77,6 +77,8 @@ code { font-size: .92em; background: var(--zk-surface-2); padding: 1px 6px; bord
 .footer-brand { display: grid; gap: 12px; max-width: 420px; }
 .footer-brand p { font-size: 13.5px; display: flex; gap: 6px; align-items: flex-start; }
 .footer-brand p svg { margin-top: 3px; flex: none; }
+.footer-link { color: var(--zk-sky); font-weight: 600; }
+.footer-link:hover { text-decoration: underline; }
 .footer-eco-title { font: 700 12px/1 var(--zk-font-body); letter-spacing: .12em; text-transform: uppercase; color: var(--zk-text-subtle); }
 .footer-eco ul { list-style: none; padding: 0; margin: 12px 0 0; display: grid; gap: 8px; font-size: 14px; }
 .footer-eco a:hover strong { color: var(--zk-sky); }

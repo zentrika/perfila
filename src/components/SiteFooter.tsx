@@ -1,7 +1,7 @@
 import Brand from './Brand';
 import Icon from './Icon';
 
-import { ECOSYSTEM } from '@/lib/site';
+import { ECOSYSTEM, REPO_URL } from '@/lib/site';
 
 export default function SiteFooter() {
   return (
@@ -11,6 +11,15 @@ export default function SiteFooter() {
           <Brand compact />
           <p className="muted">
             <Icon name="lock" size={14} /> Tus datos se guardan solo en este navegador. Perfila no tiene servidor de datos ni cuentas.
+          </p>
+          <p className="muted">
+            <Icon name="external" size={14} />
+            <span>
+              Código abierto.{' '}
+              <a href={`${REPO_URL}/issues`} target="_blank" rel="noopener noreferrer" className="footer-link">
+                Propón una mejora o reporta un error
+              </a>
+            </span>
           </p>
         </div>
         {ECOSYSTEM.length > 0 && (
