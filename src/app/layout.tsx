@@ -18,7 +18,15 @@ export const metadata: Metadata = {
   description: `${TAGLINE} Crea tu hoja de vida con plantillas compatibles con ATS y analiza la que ya tienes. Gratis y sin registro.`,
   applicationName: PRODUCT,
   icons: { icon: favicon.src },
-  openGraph: { type: 'website', siteName: `${PRODUCT} — by ZENTRIKA`, locale: 'es_CO' },
+  openGraph: {
+    type: 'website',
+    siteName: `${PRODUCT} — by ZENTRIKA`,
+    locale: 'es_CO',
+    title: '¿Tu hoja de vida pasa el filtro ATS? — Perfila',
+    description: 'Crea tu CV con plantillas que los ATS sí leen o analiza el que ya tienes. Gratis, sin registro y de código abierto.',
+    images: [{ url: '/og.jpg', width: 1200, height: 627, alt: 'Perfila — by ZENTRIKA: hojas de vida compatibles con ATS' }],
+  },
+  twitter: { card: 'summary_large_image', images: ['/og.jpg'] },
 };
 
 export const viewport: Viewport = { themeColor: '#080F1A' };
